@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Silent Way Press</title>
+  <meta name="description" content="Silent Way Press is a small independent imprint based in Ithaca, New York. We publish books for operators — practitioners, executives, and builders at the intersection of strategy and execution." />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Silent Way Press" />
+  <meta property="og:description" content="Books for operators. An independent imprint based in Ithaca, New York." />
+  <meta property="og:url" content="https://silentwaypress.com/" />
+  <meta property="og:image" content="https://silentwaypress.com/og.png" />
+
+  <link rel="icon" type="image/png" href="favicon.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            // Press palette — restrained, editorial.  Not the book's navy/cream.
+            paper:    "#F6F2E8",   // warm cream, the editorial ground
+            paperSoft:"#EDE7D6",   // a second warmer cream for cards
+            ink:      "#1A1A1A",   // near-black for body type
+            inkSoft:  "#4A4A4A",   // softer ink for secondary copy
+            muted:    "#7A7470",   // taupe-gray for fine print
+            rule:     "#D6CFBE",   // a quiet cream rule
+            ochre:    "#8C6E3A",   // single accent — muted ochre, not gold
+            ochreDark:"#6B5128",
+          },
+          fontFamily: {
+            serif: ["Source Serif 4", "Georgia", "serif"],
+            sans:  ["Inter",  "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Helvetica", "Arial", "sans-serif"],
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    html, body { background: #F6F2E8; color: #1A1A1A; }
+    body { font-family: "Source Serif 4", Georgia, serif; font-feature-settings: "kern", "liga", "onum"; }
+    .ui   { font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+    .small-caps {
+      font-family: "Inter", sans-serif;
+      font-weight: 500;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-size: 11px;
+    }
+    .editorial-rule {
+      height: 1px;
+      background: #D6CFBE;
+      width: 64px;
+      margin: 2.5rem auto;
+    }
+    .editorial-rule.left {
+      margin-left: 0;
+    }
+    /* The press mark — a typographic monogram for restraint */
+    .press-mark {
+      font-family: "Source Serif 4", Georgia, serif;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      font-style: italic;
+      color: #8C6E3A;
+    }
+  </style>
+</head>
+<body class="bg-paper text-ink">
+
+  <!-- ─── Top utility bar ───────────────────────────────────────────────── -->
+  <header class="border-b border-rule/60">
+    <div class="max-w-5xl mx-auto px-6 py-5 flex items-center justify-between">
+      <a href="/" class="press-mark text-lg">Silent Way Press</a>
+      <nav class="ui text-sm text-inkSoft hidden sm:flex gap-7">
+        <a href="#catalog"  class="hover:text-ink">Catalog</a>
+        <a href="#about"    class="hover:text-ink">About</a>
+        <a href="#submissions" class="hover:text-ink">Submissions</a>
+        <a href="#contact"  class="hover:text-ink">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ─── Hero — the press identity, not a book pitch ──────────────────── -->
+  <section class="px-6 pt-24 pb-20 md:pt-32 md:pb-28">
+    <div class="max-w-3xl mx-auto text-center">
+      <p class="small-caps text-muted mb-8">An independent imprint · Established 2026</p>
+      <h1 class="font-serif text-5xl md:text-7xl font-semibold leading-[1.05] tracking-tight text-ink mb-8">
+        Silent Way Press
+      </h1>
+      <p class="font-serif italic text-2xl md:text-3xl text-inkSoft leading-snug mb-10">
+        Books for operators.
+      </p>
+      <div class="editorial-rule"></div>
+      <p class="font-serif text-lg md:text-xl text-inkSoft leading-relaxed max-w-2xl mx-auto">
+        Silent Way Press publishes manuscripts that compress hard-won practitioner experience into portable disciplines. We publish slowly, edit thoroughly, and design for the long shelf.
+      </p>
+    </div>
+  </section>
+
+  <!-- ─── About — the editorial position ───────────────────────────────── -->
+  <section id="about" class="px-6 py-20 md:py-28 border-t border-rule/60">
+    <div class="max-w-3xl mx-auto">
+      <p class="small-caps text-ochre mb-6">The press</p>
+      <h2 class="font-serif text-3xl md:text-5xl font-semibold leading-tight tracking-tight text-ink mb-10">
+        Why this press exists.
+      </h2>
+
+      <div class="font-serif text-lg leading-[1.75] text-ink space-y-6">
+        <p>
+          The publishing economics of business non-fiction reward velocity — books that ship fast, market wide, and treat the reader as a buyer first and a practitioner second. Silent Way Press exists to publish in the opposite direction.
+        </p>
+        <p>
+          We seek manuscripts from operators — executives, builders, governance leaders, and the practitioners they work alongside. The kind of book where the author has spent enough years inside the discipline to know what they would tell their younger self, and is willing to put it down in prose with the directness the work requires.
+        </p>
+        <p>
+          We edit at the level of argument and at the level of sentence. We design each book as a long-lived object, not a launch artifact. We publish few titles per year. We expect each to be useful a decade after we ship it.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Imprint name — the Miles Davis reference ─────────────────────── -->
+  <section class="px-6 py-20 md:py-28 border-t border-rule/60 bg-paperSoft">
+    <div class="max-w-3xl mx-auto">
+      <p class="small-caps text-ochre mb-6">The name</p>
+      <h2 class="font-serif text-3xl md:text-4xl font-semibold leading-tight tracking-tight text-ink mb-10">
+        <em>In a Silent Way.</em>
+      </h2>
+
+      <div class="font-serif text-lg leading-[1.75] text-ink space-y-6">
+        <p>
+          The press takes its name from the 1969 Miles Davis recording, <em>In a Silent Way</em> — widely understood as the record that opened the door to the next twenty years of jazz. It did so by stripping away rather than adding. Less rhythm. Fewer notes. Longer space between them. The result was a recording that does not impose itself on the room — it changes it.
+        </p>
+        <p>
+          We take the principle as our editorial standard. Restraint is generative. A book made of fewer, harder-edited sentences carries further than a book made of more.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Catalog ───────────────────────────────────────────────────────── -->
+  <section id="catalog" class="px-6 py-20 md:py-28 border-t border-rule/60">
+    <div class="max-w-3xl mx-auto">
+      <p class="small-caps text-ochre mb-6">Catalog</p>
+      <h2 class="font-serif text-3xl md:text-5xl font-semibold leading-tight tracking-tight text-ink mb-12">
+        Current titles.
+      </h2>
+
+      <!-- Title entry — Operating Intelligence -->
+      <article class="mb-12">
+        <p class="small-caps text-muted mb-3">Forthcoming · August 2026</p>
+        <h3 class="font-serif text-2xl md:text-3xl font-semibold text-ink mb-2 leading-tight">
+          Operating Intelligence
+        </h3>
+        <p class="font-serif italic text-lg text-inkSoft mb-4">
+          How Enterprises Build AI That Lasts
+        </p>
+        <p class="font-serif text-base text-inkSoft mb-3">
+          by Brandon Chiazza
+        </p>
+        <p class="font-serif text-lg leading-relaxed text-ink mb-6">
+          A working manual for the executives, builders, and governance leaders who have to turn AI capability into durable enterprise value. Twenty chapters on the context layer, the proof-of-value discipline, and the operating-model change required to absorb either.
+        </p>
+        <div class="flex flex-wrap gap-x-6 gap-y-2 text-sm ui text-inkSoft">
+          <span>Hardcover · 416pp</span>
+          <span>ISBN 979-8-9963373-0-9</span>
+          <a href="https://operatingintelligence.org" class="text-ochreDark hover:text-ink underline-offset-4 hover:underline">
+            More at operatingintelligence.org →
+          </a>
+        </div>
+      </article>
+
+      <hr class="border-rule/60 my-12" />
+
+      <p class="font-serif text-base italic text-muted leading-relaxed">
+        Additional titles are announced as they enter production.
+      </p>
+    </div>
+  </section>
+
+  <!-- ─── Submissions ──────────────────────────────────────────────────── -->
+  <section id="submissions" class="px-6 py-20 md:py-28 border-t border-rule/60 bg-paperSoft">
+    <div class="max-w-3xl mx-auto">
+      <p class="small-caps text-ochre mb-6">Submissions</p>
+      <h2 class="font-serif text-3xl md:text-5xl font-semibold leading-tight tracking-tight text-ink mb-10">
+        What we read.
+      </h2>
+
+      <div class="font-serif text-lg leading-[1.75] text-ink space-y-6">
+        <p>
+          We accept proposals in narrow categories: enterprise AI, operating disciplines, governance, and adjacent practitioner non-fiction. We rarely publish memoir, business biography, or how-to-for-individuals titles.
+        </p>
+        <p>
+          A complete proposal includes:
+        </p>
+        <ul class="list-disc list-outside pl-6 space-y-2">
+          <li>A cover letter (one page) explaining the book and the reader it is for.</li>
+          <li>A working table of contents.</li>
+          <li>One sample chapter that demonstrates voice and discipline.</li>
+          <li>A short biographical note on the author's vantage and credentials.</li>
+        </ul>
+        <p>
+          We acknowledge submissions within four weeks. We do not respond to incomplete proposals.
+        </p>
+        <p class="pt-2">
+          Send proposals to <a href="mailto:editorial@silentwaypress.com" class="text-ochreDark hover:text-ink underline">editorial@silentwaypress.com</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Contact ──────────────────────────────────────────────────────── -->
+  <section id="contact" class="px-6 py-20 md:py-28 border-t border-rule/60">
+    <div class="max-w-3xl mx-auto">
+      <p class="small-caps text-ochre mb-6">Contact</p>
+      <h2 class="font-serif text-3xl md:text-5xl font-semibold leading-tight tracking-tight text-ink mb-12">
+        How to reach us.
+      </h2>
+
+      <dl class="font-serif text-lg space-y-8">
+        <div>
+          <dt class="small-caps text-muted mb-2">Editorial &amp; submissions</dt>
+          <dd><a href="mailto:editorial@silentwaypress.com" class="text-ink hover:text-ochreDark">editorial@silentwaypress.com</a></dd>
+        </div>
+        <div>
+          <dt class="small-caps text-muted mb-2">Rights, permissions, and translation</dt>
+          <dd><a href="mailto:rights@silentwaypress.com" class="text-ink hover:text-ochreDark">rights@silentwaypress.com</a></dd>
+        </div>
+        <div>
+          <dt class="small-caps text-muted mb-2">Press inquiries</dt>
+          <dd><a href="mailto:press@silentwaypress.com" class="text-ink hover:text-ochreDark">press@silentwaypress.com</a></dd>
+        </div>
+        <div>
+          <dt class="small-caps text-muted mb-2">General</dt>
+          <dd><a href="mailto:hello@silentwaypress.com" class="text-ink hover:text-ochreDark">hello@silentwaypress.com</a></dd>
+        </div>
+      </dl>
+    </div>
+  </section>
+
+  <!-- ─── Footer ───────────────────────────────────────────────────────── -->
+  <footer class="border-t border-rule/60 px-6 py-12 mt-8">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-start md:items-end justify-between gap-6">
+      <div>
+        <p class="press-mark text-base mb-1">Silent Way Press</p>
+        <p class="ui text-sm text-muted">Ithaca, New York</p>
+      </div>
+      <div class="text-sm ui text-muted">
+        <p>&copy; 2026 Silent Way Press. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

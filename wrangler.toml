@@ -1,0 +1,26 @@
+# Cloudflare Worker config — silent-way-press
+#
+# A small, fully-static press site. No API routes, no Resend, no PDF
+# lead magnet. The Worker exists only to mirror the sibling-site
+# architecture (operatingintelligence.org, twelvelaws.ai) so wrangler,
+# Cloudflare Pages binding, and deploys all behave identically.
+
+name = "silent-way-press"
+main = "src/worker.js"
+account_id = "02e8f63b5b2cdea5bd637c9e7cd3661a"   # Modali
+compatibility_date = "2026-06-01"
+
+# Keep the workers.dev fallback URL alive (silent-way-press.modali.workers.dev)
+# for testing + admin access alongside the custom domain.
+workers_dev   = true
+preview_urls  = true
+
+routes = [
+  { pattern = "silentwaypress.com",     custom_domain = true },
+  { pattern = "www.silentwaypress.com", custom_domain = true },
+]
+
+[assets]
+directory = "./"
+binding = "ASSETS"
+not_found_handling = "404-page"
