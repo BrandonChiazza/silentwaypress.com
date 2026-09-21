@@ -26,18 +26,26 @@ If Brandon transferred the domain in (not registered at Cloudflare originally):
 3. Routes: `press@`, `hello@`, `editorial@`, `rights@`, `brandon@` → the destination, plus a catch-all `*@silentwaypress.com` → the destination.
 4. Test: send yourself a message at press@silentwaypress.com from any other account.
 
-### Send as press@ and brandon@ from Gmail (after receiving works)
+### Or run it from the terminal
+
+`CLOUDFLARE_API_TOKEN=... ./scripts/enable_email_routing.sh` does steps 1 to 3 through the Cloudflare API (token permissions are listed in the script). The verification click in step 2 still has to happen in the Gmail inbox.
+
+### Sending the launch outreach without Gmail
+
+`ai-enterprise/scripts/send_outreach.py --send` sends the five emails in `ai-enterprise/launch/Outreach_Emails.md` through the Resend API from `Brandon Chiazza <press@silentwaypress.com>`, reply-to press@. It needs `RESEND_API_KEY` and refuses to run until the MX record exists, so replies have somewhere to go.
+
+### Send as press@ from Gmail (optional, for day-to-day mail)
 
 Gmail → Settings → Accounts → "Send mail as" → Add another email address:
 
-- Name: `Silent Way Press` (for press@) or `Brandon Chiazza` (for brandon@)
+- Name: `Brandon Chiazza`
 - Email: `press@silentwaypress.com`
 - Untick "Treat as an alias" if you want replies to stay clearly separate; leave it ticked for the simplest setup.
 - SMTP server: `smtp.resend.com`, port `465`, SSL
 - Username: `resend`
 - Password: a Resend API key with sending permission (create one named "gmail-send-as" in the Resend dashboard)
 
-Gmail sends a confirmation code to the address; it arrives through Email Routing. Repeat for `brandon@silentwaypress.com`. Replies to anything you send come back through Email Routing to Gmail.
+Gmail sends a confirmation code to the address; it arrives through Email Routing. Replies to anything you send come back through Email Routing to Gmail. Brandon's decision (2026-09-21): press@ is the one outbound identity for the book; brandon@ is routed but not needed.
 
 
 The site exposes four `@silentwaypress.com` mailto addresses. Set these up in Cloudflare → silentwaypress.com → Email → **Email Routing**.
