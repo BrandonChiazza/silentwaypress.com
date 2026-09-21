@@ -14,6 +14,32 @@ If Brandon transferred the domain in (not registered at Cloudflare originally):
 
 ## Email — Cloudflare Email Routing
 
+### Status, checked 2026-09-21
+
+- **Receiving is not set up.** `silentwaypress.com` has no MX record, so every `@silentwaypress.com` address bounces (the June 2026 test to editorial@ failed with "recipient server did not accept our requests to connect"). Email Routing was never enabled.
+- **Sending is set up.** Resend has the domain verified: `resend._domainkey.silentwaypress.com` (DKIM) and `send.silentwaypress.com` (SPF + return-path MX) exist. DMARC is `p=none` with reports to hello@, which will start working once routing is on.
+
+### Turn on receiving (5 minutes, Cloudflare dashboard)
+
+1. Cloudflare → silentwaypress.com → Email → Email Routing → **Get started**. Let Cloudflare add its MX and SPF records (they do not conflict with Resend's, which live on `send.`).
+2. Destination address: `brandon.chiazza@gmail.com`. Click the verification link Cloudflare emails you.
+3. Routes: `press@`, `hello@`, `editorial@`, `rights@`, `brandon@` → the destination, plus a catch-all `*@silentwaypress.com` → the destination.
+4. Test: send yourself a message at press@silentwaypress.com from any other account.
+
+### Send as press@ and brandon@ from Gmail (after receiving works)
+
+Gmail → Settings → Accounts → "Send mail as" → Add another email address:
+
+- Name: `Silent Way Press` (for press@) or `Brandon Chiazza` (for brandon@)
+- Email: `press@silentwaypress.com`
+- Untick "Treat as an alias" if you want replies to stay clearly separate; leave it ticked for the simplest setup.
+- SMTP server: `smtp.resend.com`, port `465`, SSL
+- Username: `resend`
+- Password: a Resend API key with sending permission (create one named "gmail-send-as" in the Resend dashboard)
+
+Gmail sends a confirmation code to the address; it arrives through Email Routing. Repeat for `brandon@silentwaypress.com`. Replies to anything you send come back through Email Routing to Gmail.
+
+
 The site exposes four `@silentwaypress.com` mailto addresses. Set these up in Cloudflare → silentwaypress.com → Email → **Email Routing**.
 
 ### Destination address(es)
